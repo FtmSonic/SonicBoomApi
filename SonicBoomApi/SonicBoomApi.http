@@ -1,0 +1,6 @@
+@SonicBoomApi_HostAddress = http://localhost:5038
+
+GET {{SonicBoomApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

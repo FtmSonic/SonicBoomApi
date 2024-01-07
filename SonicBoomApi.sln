@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonicBoomApi", "SonicBoomApi\SonicBoomApi.csproj", "{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07CAB4D5-BDAC-4614-BF35-5E510336AD1E}
+	EndGlobalSection
+EndGlobal
