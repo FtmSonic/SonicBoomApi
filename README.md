@@ -16,7 +16,7 @@ Sonic Boom use signalR to interact with the client, a powerfull technology who u
 
 Sonic Boom will use postgreSQL as its database, an open source database with advanced SQL support and fast queries even with millions of data records.
 
-Sonic Boom interact with dedicated node in websocket to be fatest as possible.
+Sonic Boom interact with dedicated node in websocket (http in public testnet) to be fatest as possible.
 
 With these all choices Sonic Boom will be one of the fastest Technology to use blockchain in the video games.
 

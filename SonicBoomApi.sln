@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonicBoomApi", "SonicBoomApi\SonicBoomApi.csproj", "{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SonicBoomApi", "SonicBoomApi\SonicBoomApi.csproj", "{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonicBoomOrm", "SonicBoomOrm\SonicBoomOrm.csproj", "{15CF0535-D484-44D4-BF8D-B91DB054EBDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonicBoomDto", "SonicBoomDto\SonicBoomDto.csproj", "{7A77CE63-1B6A-40C8-8832-5A2F8B2DAAC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonicBoomService", "SonicBoomService\SonicBoomService.csproj", "{C33CAD29-8150-41A9-8C17-68A06D332BA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B26822A-51CD-4572-AB34-2D1BDC5FF81C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CF0535-D484-44D4-BF8D-B91DB054EBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CF0535-D484-44D4-BF8D-B91DB054EBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CF0535-D484-44D4-BF8D-B91DB054EBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CF0535-D484-44D4-BF8D-B91DB054EBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A77CE63-1B6A-40C8-8832-5A2F8B2DAAC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A77CE63-1B6A-40C8-8832-5A2F8B2DAAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A77CE63-1B6A-40C8-8832-5A2F8B2DAAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A77CE63-1B6A-40C8-8832-5A2F8B2DAAC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33CAD29-8150-41A9-8C17-68A06D332BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33CAD29-8150-41A9-8C17-68A06D332BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33CAD29-8150-41A9-8C17-68A06D332BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33CAD29-8150-41A9-8C17-68A06D332BA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
