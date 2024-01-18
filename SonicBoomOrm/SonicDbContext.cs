@@ -10,6 +10,8 @@ namespace SonicBoomOrm
     public class SonicDbContext : DbContext
     {
         public DbSet<Account> Accounts { get; set; }
-
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Contract> Contracts { get; set; }
+        public DbSet<ContractEvent> ContractEvents { get; set; }
     }
 }

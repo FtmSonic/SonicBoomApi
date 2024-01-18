@@ -15,6 +15,8 @@ namespace SonicBoomOrm
         public int ProjectId { get; set; }
         public string Name { get; set; }
         public int AccountId { get; set; }
+        public string ApiKey { get; set; }
+        public string ReadOnlyApiKey { get; set; }
         public virtual Account Account { get; set; }
         public virtual List<Contract> Contract { get; set; }
 
