@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SonicBoomApi.Hubs;
+using SonicBoomApi.Interfaces;
+using SonicBoomApi.Services;
 using SonicBoomOrm;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,11 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<SonicDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddTransient<IApiKeyValidation, ApiKeyValidation>();
+builder.Services.AddScoped<ApiKeyAuthFilter>();
+
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
