@@ -13,5 +13,11 @@ namespace SonicBoomOrm
         public DbSet<Project> Projects { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<ContractEvent> ContractEvents { get; set; }
+
+        public SonicDbContext(DbContextOptions options)
+    : base(options)
+        {
+        }
+
     }
 }

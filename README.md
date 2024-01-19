@@ -43,3 +43,12 @@ With account abstraction you keep same functionnalities than previous package bu
 
 
 
+### Scaffold Database
+
+Update appsettings.json connectionsctring and create the database on postgres, after you can use ef to apply migration with Package Manager Console
+
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add MigrationName --project SonicBoomOrm --startup-project SonicBoomApi
+
+dotnet ef database update --project SonicBoomOrm --startup-project SonicBoomApi
