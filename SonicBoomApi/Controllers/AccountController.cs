@@ -8,6 +8,7 @@ using System.Security.Claims;
 using System.Text;
 using SonicBoomDto;
 using Nethereum.Signer;
+using SonicBoomService.Interfaces;
 
 namespace SonicBoomApi.Controllers
 {
@@ -18,15 +19,17 @@ namespace SonicBoomApi.Controllers
 
         private IConfiguration _config;
         private readonly IMemoryCache _cache;
+        private readonly IAccountService _accountService;
         private readonly ILogger<AccountController> _logger;
         private const string message = "Welcome to Sonic Boom, sign this message to authenticate {0}";
         private const string cacheConnectionKey = "GetConnection_{0}";
 
-        public AccountController(ILogger<AccountController> logger, IConfiguration config, IMemoryCache cache)
+        public AccountController(ILogger<AccountController> logger, IConfiguration config, IMemoryCache cache, IAccountService accountService)
         {
             _logger = logger;
             _config = config;
             _cache = cache;
+            _accountService = accountService;
         }
 
 
@@ -53,6 +56,23 @@ namespace SonicBoomApi.Controllers
             }
 
             return Unauthorized();
+        }
+
+        [Authorize]
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register([FromBody] AccountDto newAccount)
+        {
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+            var claimAccount = claimsIdentity.FindFirst(JwtRegisteredClaimNames.Name);
+
+            if (!string.Equals(claimAccount.Value, newAccount.Address, StringComparison.OrdinalIgnoreCase))
+            {
+                // need to be address in account to register
+                return Unauthorized();
+            }
+            await _accountService.Register(newAccount);
+
+            return Ok(newAccount);
         }
 
         private ConnectionDto CheckEntry(string account)
@@ -132,7 +152,8 @@ namespace SonicBoomApi.Controllers
             {
                 // read user from DB or create a new one
                 // for now we fake a new user
-                user = new AccountDto { Address = account, RecoveryEmail = string.Empty };
+                string address = Nethereum.Util.AddressExtensions.ConvertToEthereumChecksumAddress(login.Signer);
+                user = await _accountService.GetAccount(address);
             }
             else
             {

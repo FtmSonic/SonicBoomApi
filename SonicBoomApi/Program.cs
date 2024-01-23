@@ -8,6 +8,8 @@ using SonicBoomApi.Hubs;
 using SonicBoomApi.Interfaces;
 using SonicBoomApi.Services;
 using SonicBoomOrm;
+using SonicBoomService;
+using SonicBoomService.Interfaces;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,7 @@ builder.Services.AddDbContext<SonicDbContext>(options =>
 
 
 builder.Services.AddTransient<IApiKeyValidation, ApiKeyValidation>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ApiKeyAuthFilter>();
 
 builder.Services.AddSignalR();

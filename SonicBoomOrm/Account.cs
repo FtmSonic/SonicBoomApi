@@ -1,9 +1,11 @@
 ﻿using SonicBoomDto;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace SonicBoomOrm
 {
+    [Index(nameof(Address), IsUnique = true)]
     public class Account
     {
         [Key]
