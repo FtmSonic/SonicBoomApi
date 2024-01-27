@@ -40,8 +40,14 @@ You will have a free version who includes a number of transactions by day, you c
 
 With account abstraction you keep same functionnalities than previous package but you need to fill your account with some token to paid transaction we will charge an extra 10% for these transactions, but don't worry fantom is one of the less expensive blockchain on the market.
 
+## Schema
 
+As an example of implementation, the game studio can choose to set up direct communication between the game and the Sonic Boom server, or to manage all communications via its own server. We generate 2 apis keys per project, one that can read and write, and the other that can only read data.
+This second can be used, for example, directly by the game to retrieve items from users, or items on sale in the marketplace.
 
+![App schema](https://github.com/youtpout/SecureSwap/blob/main/schema.png?raw=true)
+
+# Local installation
 
 ### Scaffold Database
 
