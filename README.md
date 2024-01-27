@@ -45,7 +45,7 @@ You can have a relayer, you keep the same functionalities as in previous package
 As an example of implementation, the game studio can choose to set up direct communication between the game and the Sonic Boom server, or to manage all communications via its own server. We generate 2 apis keys per project, one that can read and write, and the other that can only read data.
 This second can be used, for example, directly by the game to retrieve items from users, or items on sale in the marketplace.
 
-![App schema](https://github.com/youtpout/SecureSwap/blob/main/schema.png?raw=true)
+![App schema](https://github.com/FtmSonic/SonicBoomApi/blob/main/schema.png?raw=true)
 
 # Local installation
 
