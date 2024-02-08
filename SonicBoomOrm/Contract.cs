@@ -18,6 +18,7 @@ namespace SonicBoomOrm
         public string Address { get; set; }
         public string Name { get; set; }
         public ContractType ContractType { get; set; }
+        public bool Disabled { get; set; }
         public virtual Project Project { get; set; }
     }
 }
